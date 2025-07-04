@@ -3,7 +3,7 @@ from pathlib import Path
 
 from cyclopts import App
 
-from currency_conversion import DATA_DIR
+from currency_conversion import CACHE_DIR
 from currency_conversion.sources import FawazAhmed0Source
 
 app = App()
@@ -14,7 +14,7 @@ def fetch_exchange_rate(
     base_currency: str,
     dest_currency: str,
     date: str = date.today().isoformat(),
-    data_dir: Path = DATA_DIR,
+    data_dir: Path = CACHE_DIR,
     cache: bool = True,
 ) -> float:
     """

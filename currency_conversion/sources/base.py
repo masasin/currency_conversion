@@ -4,14 +4,14 @@ from pathlib import Path
 
 from pydantic import BaseModel
 
-from currency_conversion import DATA_DIR
+from currency_conversion import CACHE_DIR
 
 
 class BaseExchangeRateSource(ABC, BaseModel):
     base_currency: str
     dest_currency: str
     date: date
-    data_dir: Path = DATA_DIR
+    data_dir: Path = CACHE_DIR
 
     @abstractmethod
     def get_rate(self, cache: bool = True) -> float:
