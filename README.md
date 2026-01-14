@@ -2,11 +2,15 @@
 
 Finds the currency exchange rates between two currencies on a given date.
 
-Install by symlinking to `~/.local/bin`
 
 ```bash
 uv sync
-ln -s ~/path/to/package/.venv/bin/fetch-exchange-rate ~/.local/bin
+```
+
+Install globally by running:
+
+```bash
+uv tool install .
 ```
 
 Then, run with:
